@@ -1,0 +1,7 @@
+# ex com.zaxxer.hikari<type=PoolConfig (Some String)><>MaximumPoolSize)
+
+- pattern: com.zaxxer.hikari<type=Pool(.*)>(ActiveConnections|IdleConnections|ThreadsAwaitingConnection|TotalConnections)
+  name: document_hikari_$1_$2
+
+- pattern: com.zaxxer.hikari<type=PoolConfig(.*)>(MaximumPoolSize|MinimumIdle)
+  name: document_hikari_$1_$2
